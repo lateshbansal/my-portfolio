@@ -57,3 +57,32 @@ scrollEle.addEventListener("click",scrollToTop);
 
 const about=document.querySelector(".nav-About");
 about.addEventListener("click",scrollToTop);
+
+
+
+
+
+
+//animated number
+
+const counterNum=document.querySelectorAll(".counters-numbers");
+const speed=1;
+
+counterNum.forEach((curElem) => {
+  const updateNumber= ()=>{
+    const targetNumber=parseInt(curElem.dataset.number);
+  //  console.log(targetNumber);
+  const initialNum=parseInt(curElem.innerText);
+ // console.log(initialNum);
+
+const incrementNum=Math.trunc(targetNumber/speed);
+if(initialNum < targetNumber)
+{
+  curElem.innerText = `${initialNum +  1}+`;
+
+  setTimeout(updateNumber,60);
+}
+
+  }
+  updateNumber();
+})
