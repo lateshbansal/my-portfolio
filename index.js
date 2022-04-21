@@ -1,3 +1,17 @@
+// responsive nav bar
+const header=document.querySelector(".header");
+const mobElem=document.querySelector(".mobile-navbar-btn")
+mobElem.addEventListener("click",()=>{
+header.classList.toggle("active");
+
+})
+
+
+
+
+
+
+
 const p_btns = document.querySelector(".p-btns");
 const p_btn = document.querySelectorAll(".p-btn");
 const img = document.querySelectorAll(".img-overlay");

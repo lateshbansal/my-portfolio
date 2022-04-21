@@ -14,6 +14,7 @@ font-family: 'Work Sans', sans-serif;
   --visited: rgba(224, 9, 9, 0.671);
   --pera: #777;
   --pera-tint: #e4e4e4;
+  --black:#000;
   -white: #fff;
   --Parrot-green: rgb(9, 255, 0);
   --overlay: #3e64ff;
@@ -179,10 +180,20 @@ nav a{
     color:#3e64ff;
 } 
 
+.mobile-navbar-btn{
+    display:none ;
+    background-color: transparent;cursor: pointer;border: none;
+}
+
+.mobile-nav-icon[name="close-outline"]{
+    display:none;
+}
+
 /*=================== --------------====== Main section start ---------------==============================-------*/
 
 .section{
     padding: 9rem 0;
+    min-width: 100%;
 }
 .grid{
     display: grid;
@@ -234,13 +245,25 @@ nav a{
 }
 
 .hero-img{
-    max-width: 80%;
+    min-width: 48rem;
+    position: absolute;
+    top: -38px;
+    left: 86px;
+    
 }
 
 .section-hero-image{
     display:flex;
     justify-content: center;
     align-items: center;
+    background:var(--gradient);
+    border-radius:51% 49% 55% 45% / 84% 83% 17% 16% ;
+    max-width: 450px;
+    position: relative;
+
+
+
+    min-height: 485px;
 }
 
 .hireme-btn{
@@ -874,3 +897,108 @@ z-index: 12;
     cursor: pointer;
     
 }
+
+
+/* media queries */
+
+@media (max-width:980px){
+    .header{
+        position: relative;
+    }
+    .mobile-navbar-btn{
+        display: block;
+     
+        border:3px solid var(--black);
+        color: var(--helper);
+        z-index: 9999;
+        padding:3px;
+    
+    }
+
+    .mobile-nav-icon{
+        width: 5rem;
+        height:5rem;
+        color: #212529;
+    }
+
+    .header .logo{
+        width: 12rem;
+        height: 12rem;
+    }
+
+.nav-ul{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    background: var(--gradient);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition:all 0.3s linear;
+
+    opacity: 0;
+    visibility:hidden;
+    pointer-events: none;
+}
+
+.nav-ul{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 100;
+
+}
+.nav-li{
+    
+    font-size:3rem;
+  
+}
+
+.nav-li a{
+    color:#000;
+}
+
+.active .nav-ul{
+    transform: translateX(0%);
+   
+
+    opacity: 1;
+    visibility:visible;
+    pointer-events: auto;
+}
+
+.active .mobile-navbar-btn .mobile-nav-icon[ name="menu-outline"]
+{    display: none;}
+
+
+.active .mobile-navbar-btn .mobile-nav-icon[ name="close-outline"]
+{    display: block !important;
+      z-index: 150;
+
+}
+
+
+.section-hero-image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--gradient);
+    border-radius:51% 49% 55% 45% / 84% 83% 17% 16% ;
+    max-width: 250px;
+    position: relative;
+
+}
+
+.hero-img{
+    min-width: 36rem;
+    min-height: 39rem;
+    position: absolute;
+    top: -48px;
+    left: 21px;
+
+
+}
+
