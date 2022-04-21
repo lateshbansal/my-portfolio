@@ -1003,3 +1003,53 @@ z-index: 12;
 }
 
 }
+
+@media (max-width: 550px)
+{   
+
+    .logo{
+        position: relative;
+        left:0.5rem;
+     } 
+
+.header .logo{
+    width: 7rem;
+    height: 7rem;
+}
+
+
+.section-hero-image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--gradient);
+    border-radius:51% 49% 55% 45% / 84% 83% 17% 16% ;
+    max-width: 180px;
+    max-height: 250px;
+    position: relative;
+
+}
+
+.hero-img{
+    min-width: 36rem;
+    min-height: 39rem;
+    position: absolute;
+    top: -48px;
+    left: -10px;
+
+
+}
+.hero-name{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 4.2rem;
+}
+.common-heading {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+}
