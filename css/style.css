@@ -141,7 +141,7 @@ li{
 
 .header{
     padding:0 4.8rem;
-    height:15rem;
+    height:10rem;
     background-color: var(--bg);
   position: relative;
     display:flex;
@@ -150,9 +150,19 @@ li{
     
 }
 
+.sticky .header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 123;
+}
+
+
  .logo{
     position: relative;
-    left:2.4rem;
+    left:-4.6rem;
+    top: -2rem; 
  }  
 .nav-ul{
     display:flex;
@@ -258,6 +268,7 @@ nav a{
     align-items: center;
     background:var(--gradient);
     border-radius:51% 49% 55% 45% / 84% 83% 17% 16% ;
+    top: 5rem;
     max-width: 450px;
     position: relative;
 
@@ -1013,8 +1024,8 @@ z-index: 12;
      } 
 
 .header .logo{
-    width: 7rem;
-    height: 7rem;
+    width: 12rem;
+    height: 12rem;
 }
 
 
